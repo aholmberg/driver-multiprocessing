@@ -1,4 +1,4 @@
-Example code accompanying <blog link here>.
+Example code accompanying `a blog post on driver multiprocessing <http://www.datastax.com/dev/blog/datastax-python-driver-multiprocessing-example-for-improved-bulk-data-throughput>`_.
 
 Each script is self-contained for easy side-by-side comparison. To run::
 
