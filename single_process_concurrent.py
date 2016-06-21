@@ -8,7 +8,7 @@ from cassandra.query import tuple_factory
 
 
 def query_gen(n):
-    for _ in xrange(n):
+    for _ in range(n):
         yield ('local', )
 
 
@@ -42,4 +42,4 @@ if __name__ == '__main__':
     start = time.time()
     rows = qm.get_results(query_gen(iterations))
     delta = time.time() - start
-    print "%d queries in %s seconds (%s/s)" % (iterations, delta, iterations / delta)
+    print("%d queries in %s seconds (%s/s)" % (iterations, delta, iterations / delta))

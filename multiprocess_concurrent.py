@@ -11,7 +11,7 @@ from cassandra.query import tuple_factory
 
 
 def query_gen(n):
-    for _ in xrange(n):
+    for _ in range(n):
         yield ('local', )
 
 
@@ -34,7 +34,7 @@ class QueryManager(object):
 
     def get_results(self, params):
         params = list(params)
-        results = self.pool.map(_multiprocess_get, (params[n:n + self.concurrency] for n in xrange(0, len(params), self.concurrency)))
+        results = self.pool.map(_multiprocess_get, (params[n:n + self.concurrency] for n in range(0, len(params), self.concurrency)))
         return list(itertools.chain(*results))
 
     @classmethod
@@ -59,4 +59,4 @@ if __name__ == '__main__':
     start = time.time()
     rows = qm.get_results(query_gen(iterations))
     delta = time.time() - start
-    print "%d queries in %s seconds (%s/s)" % (iterations, delta, iterations / delta)
+    print("%d queries in %s seconds (%s/s)" % (iterations, delta, iterations / delta))
