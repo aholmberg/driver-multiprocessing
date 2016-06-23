@@ -1,3 +1,5 @@
+**NOTE: this example was written using an older version of the cassandra-driver (pre-3.0). It requires some updates to be used with 3.0+.**
+
 Example code accompanying `a blog post on driver multiprocessing <http://www.datastax.com/dev/blog/datastax-python-driver-multiprocessing-example-for-improved-bulk-data-throughput>`_.
 
 Each script is self-contained for easy side-by-side comparison. To run::
